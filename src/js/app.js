@@ -33,6 +33,8 @@ function render(variables = {}) {
   let lastname = variables.lastname ? variables.lastname : "LastName";
   let job = variables.role ? variables.role : "Your Job";
   let pais = variables.country ? variables.country : "Your Country";
+  let city = variables.city ? variables.city : "Your city";
+
   let positions = variables.socialMediaPosition;
 
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
@@ -41,6 +43,7 @@ function render(variables = {}) {
           <h1>${name} ${lastname}</h1>
           <h2>${job}</h2>
           <h3>${pais}</h3>
+          <h4>${city}</h4>
           <ul class="${positions}">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
